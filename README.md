@@ -62,7 +62,7 @@ let content = state.getIn(treeUtils.nextSibling(state, 'node-id').concat('name')
 ```js
 function insert(state, newNode, parentId, index) {
 	return state.updateIn(
-		tree.yId(state, parentId).concat('childNodes'),
+		tree.byId(state, parentId).concat('childNodes'),
 		childNodes => childNodes.splice(index, 0, newNode)
 	);
 }
